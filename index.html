@@ -541,46 +541,113 @@
           </div>
         </section>
       </div>
-<form action="http://localhost:3000/feedback" method="POST" id="contactForm">
 
-  <div class="form-group">
-    <label for="cname">Full Name</label>
-    <input type="text" id="cname" name="name" placeholder="e.g. Sonam Yangchen" required>
-  </div>
+      <section class="section">
 
-  <div class="form-group">
-    <label for="cemail">Email Address</label>
-    <input type="email" id="cemail" name="email" placeholder="your@email.com" required>
-  </div>
+    <div class="two-col">
 
-  <div class="form-group">
-    <label for="ctopic">Topic</label>
-    <select id="ctopic" name="topic">
-      <option value="" disabled selected>Select a topic…</option>
-      <option value="general">General Inquiry</option>
-      <option value="research">Research Collaboration</option>
-      <option value="telecom">Telecom Feedback</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
+      <!-- Contact Form -->
+      
 
-  <div class="form-group">
-    <label for="cmsg">Your Message</label>
-    <textarea id="cmsg" name="message" placeholder="Tell us what's on your mind…" required></textarea>
-  </div>
+        <h2 class="message" style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--teal-dark);margin-bottom:0.25rem;">
+          Send a Message
+        </h2>
 
-  <button class="btn btn-gold" type="submit" style="width:100%; justify-content:center;">
-    Send Message ✈️
-  </button>
+        <p class="message" style="color:var(--white);font-size:01.88rem;margin-bottom:1.75rem;">
+          Fill in the form and we'll respond within 2 business days.
+        </p>
 
-</form>
+        <form action="http://localhost:3000/feedback" method="POST" id="contactForm">
+          <div class="form-group">
+            <!-- for="cname" - connects label to input -->
+            <label for="cname">Full Name</label>
+            <input type="text" id="cname" name="name" placeholder="e.g. Sonam Yangchen" />
+          </div>
 
-<button type="button" onclick="document.getElementById('contactForm').reset();" class="clearForm">
-  Clear Answers 🧹
-</button>
+          <div class="form-group">
+            <label for="cemail">Email Address</label>
+            <!-- Browser checks if input looks like an email -->
+            <input type="email" id="cemail" name="email" placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="ctopic">Topic</label>
+            <select id="ctopic" name="topic">
+              <option value="" disabled selected>Select a topic…</option>
+              <option value="general">General Inquiry</option>
+              <option value="research">Research Collaboration</option>
+              <option value="telecom">Telecom Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cmsg">Your Message</label>
+            <!-- for long messages -->
+            <textarea id="cmsg" name="message" placeholder="Tell us what's on your mind…"></textarea>
+          </div>
+
+          <!-- Optional subject (nice touch) -->
+          <input type="hidden" name="_subject" value="New TeleCompass Feedback">
+
+          <!-- Submit Button -->
+          <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center;">
+            Send Message ✈️
+          </button>
+
+        </form>
+  <!-- <section class="section" style="padding-top:0; padding-bottom:4rem;">
+
+    <div class="two-col"> -->
+
+      <!-- Contact Form -->
+      <!-- <div class="white-card">
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--teal-dark);margin-bottom:0.25rem;">
+          Send a Message
+        </h2>
+
+        <p style="color:var(--text-mid);font-size:0.88rem;margin-bottom:1.75rem;">
+          Fill in the form and we'll respond within 2 business days.
+        </p>
+        <form action="http://localhost:3000/feedback" method="POST" id="contactForm"> -->
+
+        <!-- <div class="form-group">
+          <label for="cname">Full Name</label>
+          <input type="text" id="cname" name="name" placeholder="e.g. Sonam Yangchen" required>
+        </div>
+
+        <div class="form-group">
+          <label for="cemail">Email Address</label>
+          <input type="email" id="cemail" name="email" placeholder="your@email.com" required>
+        </div> -->
+<!-- 
+        <div class="form-group">
+          <label for="ctopic">Topic</label>
+          <select id="ctopic" name="topic">
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="general">General Inquiry</option>
+            <option value="research">Research Collaboration</option>
+            <option value="telecom">Telecom Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>  -->
+
+        <!-- <div class="form-group">
+          <label for="cmsg">Your Message</label>
+          <textarea id="cmsg" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+        </div>
+
+        <button class="btn btn-gold" type="submit" style="width:100%; justify-content:center;">
+          Send Message ✈️
+        </button>
+        <button type="button" onclick="document.getElementById('contactForm').reset();" class="clearForm">
+          Clear Answers 🧹
+        </button>
+      </form> -->
+
 
         <!-- FORM END -->
-      </div>
+      <!-- </div> -->
       <!-- Sidebar -->
       <div style="display:flex;flex-direction:column;gap:1.25rem;">
 
@@ -623,11 +690,9 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
-</div>
-
 </main>
+
     <!-- ══════════════ FOOTER ══════════════ -->
   <footer>
     © 2026 <strong>TeleCompass</strong> · Built for telecom data exploration in Bhutan
